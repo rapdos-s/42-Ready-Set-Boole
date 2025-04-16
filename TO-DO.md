@@ -5,7 +5,7 @@
     - [X] Support functions as first class citizens;
     - [X] Natively implement bitwise operations over integer types;
 - [X] Optional: support for operator overloading
-- [ ] Exercise 00 - Adder
+- [X] Exercise 00 - Adder
 - [ ] Exercise 01 - Multiplier
 - [ ] Exercise 02 - Gray code
 - [ ] Exercise 03 - Boolean evaluation
