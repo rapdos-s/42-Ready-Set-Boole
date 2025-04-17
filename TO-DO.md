@@ -6,6 +6,7 @@
     - [X] Natively implement bitwise operations over integer types;
 - [X] Optional: support for operator overloading
 - [X] Exercise 00 - Adder
+- [X] Add 'make run' temporary rule
 - [ ] Exercise 01 - Multiplier
 - [ ] Exercise 02 - Gray code
 - [ ] Exercise 03 - Boolean evaluation
@@ -18,4 +19,5 @@
 - [ ] Exercise 10 - Curve
 - [ ] Exercise 11 - Inverse function
 - [ ] Read Foreword
+- [ ] Write README.md
 - [ ] Submission and peer-evaluation
