@@ -3,7 +3,7 @@
 using u32 = uint32_t;
 
 // fn gray_code(n: u32) -> u32;
-u32 gray_code(u32 n) { return (n ^ (n >> 0b1)); }
+u32 gray_code(u32 n) { return (n ^ (n >> 1)); }
 
 // tests ///////////////////////////////////////////////////////////////////////
 

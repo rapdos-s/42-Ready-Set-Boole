@@ -24,3 +24,20 @@ Then, for each bit from MSB to LSB (Least Significant Bit), XOR the current bit 
 To calculate gray code in a more efficient way, follow:
 G(n) = n ^ (n >> 0b1)
 
+ex03
+Time complexity: .
+Space complexity: .
+
+- If the formula is empty, throw an exception.
+- If the formula has only one character:
+  - Return true if it's '1', false if it's '0'.
+  - Otherwise, throw an exception.
+- Iterate over each character in the formula:
+  - If it's '0' or '1', push its boolean value onto the stack.
+  - If it's '!', pop one value, apply NOT, and push the result.
+  - If it's a binary operator ('&', '|', '^', '>', '='):
+    - Pop two values, apply the operator, and push the result.
+    - If there are fewer than two values, throw an exception.
+- After processing, the stack must contain exactly one value.
+  - If not, throw an exception.
+  - Otherwise, return the final result.

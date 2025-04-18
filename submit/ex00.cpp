@@ -6,10 +6,10 @@ using u32 = uint32_t;
 u32 adder(u32 a, u32 b) {
   u32 carry;
 
-  while (b != 0b0) {
+  while (b != 0) {
     carry = a & b;
     a = a ^ b;
-    b = carry << 0b1;
+    b = carry << 1;
   }
   return (a);
 }

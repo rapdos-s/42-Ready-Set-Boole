@@ -4,22 +4,22 @@ using u32 = uint32_t;
 
 // fn multiplier(a: u32, b: u32) -> u32;
 u32 multiplier(u32 a, u32 b) {
-  u32 result = 0b0;
+  u32 result = 0;
   u32 carry;
   u32 addend;
 
-  while (a != 0b0) {
-    if (a & 0b1) {
+  while (a != 0) {
+    if (a & 1) {
       addend = b;
 
-      while (addend != 0b0) {
+      while (addend != 0) {
         carry = result & addend;
         result = result ^ addend;
-        addend = carry << 0b1;
+        addend = carry << 1;
       }
     }
-    a = a >> 0b1;
-    b = b << 0b1;
+    a = a >> 1;
+    b = b << 1;
   }
   return (result);
 }
