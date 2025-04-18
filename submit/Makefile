@@ -4,7 +4,7 @@ all: ${src:.cpp=}
 fclean: ; rm -f ${src:.cpp=}
 re: fclean all
 
-current_exercise := ex03
+current_exercise := ex04
 run:
 	@clear && clang-format -i ${src} && \
 	make -s --no-print-directory ${current_exercise} && \

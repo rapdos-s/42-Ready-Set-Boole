@@ -25,8 +25,8 @@ To calculate gray code in a more efficient way, follow:
 G(n) = n ^ (n >> 0b1)
 
 ex03
-Time complexity: .
-Space complexity: .
+Time complexity: O(n), where n is the size of the input string.
+Space complexity: 0(n), where n is the size of the input string.
 
 - If the formula is empty, throw an exception.
 - If the formula has only one character:
@@ -41,3 +41,29 @@ Space complexity: .
 - After processing, the stack must contain exactly one value.
   - If not, throw an exception.
   - Otherwise, return the final result.
+
+ex04
+Time complexity: O(2^n * m) where n is the number of variables and m is the length of the formula.
+Space complexity: O(m + n) where n is the number of variables and m is the length of the formula.
+
+- Validate input
+  - Convert formula to uppercase.
+  - Ensure only valid characters: `A–Z`, `! & | ^ > =`.
+  - Throw an exception if an invalid character is found.
+
+- Extract variables
+  - Collect all distinct uppercase letters `A–Z`.
+  - Sort them in alphabetical order.
+
+- Generate combinations
+  - For `n` variables, generate all `2^n` possible binary combinations.
+
+- Evaluate each row
+  - For each combination:
+    - Replace variables in the formula with the current values.
+    - Evaluate using `eval_formula`.
+    - Store the result.
+
+- Print table
+  - Print header: variable names followed by a result column (`=`).
+  - Print each row with variable values and the corresponding result, formatted as in the example.
